@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://jungleDirtTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+
+[node name="World3" type="Node" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196622, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 32, 32 )
+
+[node name="WorldComplete" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 544, 32 )
+next_world = "res://World.tscn"
+
+
