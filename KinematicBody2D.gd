@@ -28,10 +28,12 @@ func _physics_process(delta):
 		motion.x = min(motion.x + ACCELERATION, MAX_SPEED)
 		$Sprite.flip_h = false
 		$Sprite.play("Run")
+		$Weapon.scale.x = 1
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = max(motion.x - ACCELERATION, -MAX_SPEED)
 		$Sprite.flip_h = true
 		$Sprite.play("Run")
+		$Weapon.scale.x = -1
 	else:
 		friction = true
 		$Sprite.play("Idle")

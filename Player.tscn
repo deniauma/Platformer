@@ -43,7 +43,7 @@ custom_solver_bias = 0.0
 radius = 14.0
 height = 28.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 scale = Vector2( 0.5, 0.5 )
 input_pickable = false
@@ -120,7 +120,9 @@ texture = ExtResource( 11 )
 centered = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="Area2D" parent="." index="4" instance=ExtResource( 12 )]
+[node name="Weapon" type="Node2D" parent="." index="4"]
+
+[node name="Area2D" parent="Weapon" index="0" instance=ExtResource( 12 )]
 
 visible = false
 position = Vector2( 12, 12.0001 )
