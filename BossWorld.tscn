@@ -3,7 +3,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=2]
 
-[node name="BossWorld" type="Node" index="0"]
+[node name="BossWorld" type="Node"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 

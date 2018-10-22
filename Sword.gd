@@ -7,5 +7,4 @@ func _physics_process(delta):
 		attacking = true
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	print("stop attacking")
 	attacking = false
