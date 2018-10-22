@@ -21,6 +21,15 @@ func handle_input(event):
 func update(delta):
 	return
 
-func _on_animation_finished(anim_name):
-	return
+func _on_body_entered(body):
+	if body.name == "Player":
+		owner.get_node("Sprite").modulate = Color(1, 0, 0)
+		owner.target_seen = true
+		owner.target_node = body
+			
+func _on_body_exited(body):
+	if body.name == "Player":
+		owner.get_node("Sprite").modulate = Color(1, 1, 1)
+		owner.target_seen = false
+		owner.target_node = null
 	
