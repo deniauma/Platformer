@@ -56,4 +56,4 @@ func _physics_process(delta):
 	pass
 
 func _on_HurtBox_entered(area):
-	pass # replace with function body
+	print("Player hurt by " + area.name)

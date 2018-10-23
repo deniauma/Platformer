@@ -34,6 +34,10 @@ attack=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":""
 2d_physics/layer_2="player"
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="vision"
+2d_physics/layer_5="player_hurtbox"
+2d_physics/layer_6="player_hitbox"
+2d_physics/layer_7="enemy_hurtbox"
+2d_physics/layer_8="enemy_hitbox"
 
 [rendering]
 

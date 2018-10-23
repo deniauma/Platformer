@@ -33,3 +33,7 @@ func _on_Vision_body_entered(body):
 
 func _on_Vision_body_exited(body):
 	current_state._on_body_exited(body)
+
+
+func _on_HurtBox_entered(area):
+	print("Enemy hurt by " + area.name)
