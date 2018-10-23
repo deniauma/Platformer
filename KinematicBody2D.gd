@@ -54,3 +54,6 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, UP)
 	
 	pass
+
+func _on_HurtBox_entered(area):
+	pass # replace with function body
