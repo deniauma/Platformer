@@ -22,7 +22,7 @@ func update(delta):
 	var x_dir = owner.target_node.global_position.x - owner.global_position.x
 	x_dir = x_dir / abs(x_dir)
 	motion.x = x_dir * MAX_SPEED
-	
+	owner.get_node("Weapon").scale.x *= -x_dir
 	motion = owner.move_and_slide(motion, UP)
 		
 func _on_body_exited(body):

@@ -58,7 +58,7 @@ collision_layer = 1
 collision_mask = 9
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Transform", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -129,11 +129,11 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Weapon" type="Node2D" parent="." index="4"]
 
-_sections_unfolded = [ "Transform" ]
+show_behind_parent = true
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sword" parent="Weapon" index="0" instance=ExtResource( 12 )]
 
-visible = false
 position = Vector2( 12, 12.0001 )
 scale = Vector2( 0.4, 0.4 )
 

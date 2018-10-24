@@ -11,7 +11,7 @@
 position = Vector2( 113, 246 )
 z_index = 1
 collision_layer = 2
-_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "Z Index", "collision" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
