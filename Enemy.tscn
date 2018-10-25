@@ -34,6 +34,9 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+__meta__ = {
+"_edit_vertical_guides_": [ -36.6097 ]
+}
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -45,8 +48,6 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 shape = SubResource( 1 )
 
 [node name="States" type="Node" parent="." index="2"]
-
-editor/display_folded = true
 
 [node name="Idle" type="Node" parent="States" index="0"]
 
@@ -106,10 +107,16 @@ __meta__ = {
 
 [node name="Spear" parent="Weapon" index="0" instance=ExtResource( 7 )]
 
+collision_layer = 128
+collision_mask = 16
+_sections_unfolded = [ "Collision", "Transform" ]
+
 [connection signal="body_entered" from="Vision" to="." method="_on_Vision_body_entered"]
 
 [connection signal="body_exited" from="Vision" to="." method="_on_Vision_body_exited"]
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_entered"]
+
+[connection signal="animation_finished" from="Weapon/Spear" to="." method="_on_Spear_animation_finished"]
 
 

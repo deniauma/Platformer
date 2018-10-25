@@ -20,6 +20,13 @@ func handle_input(event):
 
 func update(delta):
 	return
+	
+func get_distance():
+	return abs(owner.global_position.distance_to(owner.target_node.global_position))
+	
+func get_look_direction():
+	var x_diff = owner.target_node.global_position.x - owner.global_position.x
+	return x_diff / abs(x_diff)
 
 func _on_body_entered(body):
 	if body.name == "Player":
@@ -33,3 +40,5 @@ func _on_body_exited(body):
 		owner.target_seen = false
 		owner.target_node = null
 	
+func _on_animation_finished(anim_name):
+	return

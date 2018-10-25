@@ -18,12 +18,15 @@ func exit():
 func update(delta):
 	motion.y += GRAVITY
 	
-	var dist = owner.global_position.distance_to(owner.target_node.global_position)
-	var x_dir = owner.target_node.global_position.x - owner.global_position.x
-	x_dir = x_dir / abs(x_dir)
-	motion.x = x_dir * MAX_SPEED
-	owner.get_node("Weapon").scale.x *= -x_dir
-	motion = owner.move_and_slide(motion, UP)
+	var x_dist = get_distance()
+	var x_dir = get_look_direction()
+	if abs(x_dist) < 45:
+		return emit_signal("finished", "attacking")
+	else:
+		motion.x = x_dir * MAX_SPEED
+		owner.get_node("Weapon").scale.x = -x_dir * abs(owner.get_node("Weapon").scale.x)
+		motion = owner.move_and_slide(motion, UP)
+		return
 		
 func _on_body_exited(body):
 	._on_body_exited(body)

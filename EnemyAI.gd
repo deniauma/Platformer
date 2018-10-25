@@ -34,6 +34,11 @@ func _on_Vision_body_entered(body):
 func _on_Vision_body_exited(body):
 	current_state._on_body_exited(body)
 
-
 func _on_HurtBox_entered(area):
 	print("Enemy hurt by " + area.name)
+
+func _on_Spear_animation_finished(anim_name):
+	current_state._on_animation_finished(anim_name)
+
+func attack():
+	$Weapon/Spear.attack()
